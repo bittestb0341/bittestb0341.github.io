@@ -8,9 +8,9 @@ logo:               'assets/img/logo.png'
 background:         'assets/img/placeholder-big.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
-url:                https://bittestb0341.github.io/Moon     #https://taylantatli.github.io/Moon  # the base hostname & protocol for your site
+url:                https://bittestb0341.github.io     #https://taylantatli.github.io/Moon  # the base hostname & protocol for your site
 baseurl:            /bittestb0341 # 폴백(예기치 못한 오류)일 때 연결되는 url입니다.
-repository:         https://bittestb0341.github.io/Moon # Github bittestb0341 url입니다.
+repository:         https://bittestb0341.github.io # Github bittestb0341 url입니다.
 
 
 # Jekyll
