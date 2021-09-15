@@ -139,3 +139,6 @@ while i < 7:
 # 36 -> 3 (충돌)
 
 {% endhighlight %}
+
+
+<img src="https://bittestb0341.github.io/assets\img\5_20210915day04.png">
