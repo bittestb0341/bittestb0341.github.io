@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "알고리즘"
+title:  "[파이썬] 이진 탐색 알고리즘, 해시 탐색 알고리즘"
 date:   2021-09-15
-excerpt: "알고리즘"
+excerpt: "[파이썬] 이진 탐색 알고리즘, 해시 탐색 알고리즘"
 study: true
 tag:
 - Algorithms 
@@ -230,5 +230,5 @@ print(arrayH)
  
 {% endhighlight %}
 
-출력 답:[42, 12, 0, 25, 36, 0, 0, 0, 30, 20, 8]
+출력 답: [42, 12, 0, 25, 36, 0, 0, 0, 30, 20, 8]
 {: .notice}
