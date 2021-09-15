@@ -191,3 +191,31 @@ k가 10을 초과했을 때의 대응을 조건식으로 나누어 처리를 추
 {% endhighlight %}
 
 <img src="https://bittestb0341.github.io/assets\img\6_20210915day04.png">
+
+{% highlight python %}
+
+arrayD = [12,25,36,20,30,8,42]
+arrayH = [0] * 11 
+i = 0
+k =  arrayD[i]  % 11        # 해시함수
+
+while i < 7:
+  k = arrayD[i] % 11
+
+  while True:
+    if arrayH[k] == 0:          # 칸에 이미 들어가 있는 값이 없으면
+      arrayH[k] = arrayD[i]     # 집어 넣어라
+      break
+    else:
+      k = (k + 1) % 11
+      # print(k)
+      continue
+
+  i = i + 1
+
+print(arrayH)
+ 
+{% endhighlight %}
+
+출력 답:[42, 12, 0, 25, 36, 0, 0, 0, 30, 20, 8]
+{: .notice}
