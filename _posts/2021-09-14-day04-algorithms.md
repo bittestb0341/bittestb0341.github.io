@@ -24,3 +24,4 @@ comments: true
     * head tail (head+tail)/2
     * 요소의 갯수가 짝수라면 0~5
     * 0+5/2=2.5 보통 버리기를 사용한다.
+<img src="https://bittestb0341.github.io/assets/img/1_20210915day04.png">
