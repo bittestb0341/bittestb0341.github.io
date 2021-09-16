@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "[파이썬] 이진 탐색 알고리즘, 해시 탐색 알고리즘"
+title:  "[파이썬] 해시탐색법으로 데이터를 탐색하는 알고리즘 "
 date:   2021-09-16
-excerpt: "[파이썬] 이진 탐색 알고리즘, 해시 탐색 알고리즘"
+excerpt: "[파이썬] 해시탐색법으로 데이터를 탐색하는 알고리즘 "
 study: true
 tag:
 - Algorithms 
