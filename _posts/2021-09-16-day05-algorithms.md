@@ -20,6 +20,7 @@ comments: true
 ### 문제
 
 알고리즘을 보고 파이썬 코드를 입력하시오.
+<br>
 <img src="https://bittestb0341.github.io/assets\img\01_20210916day05.png">
 
 {% highlight python %}
