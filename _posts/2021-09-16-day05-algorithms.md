@@ -57,6 +57,9 @@ ___
 3. 단순 삽입법 ( insertion sort )
 4. 퀵 정렬     ( Quick sort )
 
+___
+___
+
 #### 단순 선택법
 
 가장 작은 데이터를 선택하여 맨 앞으로 순서대로 정렬한다.
@@ -68,6 +71,110 @@ ___
 1. 탐색 범위의 최소값을 찾는 처리
 2. 탐색 범위의 최소값을 맨 앞 요소와 교환
 
+<img src="https://bittestb0341.github.io/assets\img\02_20210916day05.png">
+
+{% highlight python %}
+arr = [12,13,11,14,10]
+
+i = 0
+
+while True:
+  if i < 4:
+    [최소값 찾기]
+    [교환]
+    i = i + 1
+  else:
+
+    
+{% endhighlight %}
+
+출력 답:  
+{: .notice}
+
+<img src="https://bittestb0341.github.io/assets\img\03_20210916day05.png">
+
+찾은 작은 값과 교환
+
+<img src="https://bittestb0341.github.io/assets\img\04_20210916day05.png">
+
+최종 알고리즘
+
+{% highlight python %}
+arr = [12,13,11,14,10]
+
+i = 0
+
+while True:
+  if i < 4:
+    #[최소값 찾기]
+    min = i
+    k = i + 1
+    while k < 5:
+      if arr[k] < arr[min]:
+        min = k
+      k += 1
+    t = arr[i]
+    arr[i] = arr[min]
+    arr[min] = t
+    i = i + 1
+
+  else:
+    print(arr)
+    break
+
+    
+{% endhighlight %}
+
+출력 답:  [10, 11, 12, 13, 14]
+{: .notice}
+
+{% highlight python %}
+i = 0
+arr = [12,13,11,14,10]
+while True:
+    if i>4:
+        print(arr)
+        break
+    else:
+        min = i
+        k = i+1
+
+        while True:
+
+            if k < 5:
+                if arr[k] < arr[min]:
+                    min = k
+                    
+                else :
+                    k = k + 1
+                    
+            else:
+                t = arr[i]
+                arr[i] = arr[min]
+                arr[min] = t
+                i = i+1
+                break
+
+{% endhighlight %}
+
+{% highlight python %}
+ar=[10,40,5,26,50]
+i=0
+while i<4:
+    min=i
+    k= i+1
+    while k<5:
+        if ar[k]<ar[min]:
+            min=k
+        k +=1
+    t=ar[i]
+    ar[i] =ar[min]
+    ar[min]=t
+    i+=1
+
+print(ar)
+
+{% endhighlight %}
 ___
 
 #### 단순 교환법 ( bubble sort )
@@ -107,3 +214,121 @@ ___
 
 1. 오른쪽 끝 요소부터 순서대로 인접한 데이터를 오름차순으로 교환하여 정렬한다.
 2. 왼쪽 끝 요소부터 순서대로 하나씩 데이터를 오름차순으로 정렬된 요소를 확정해나간다.
+
+<img src="https://bittestb0341.github.io/assets\img\05_20210916day05.png">
+
+
+{% highlight python %}
+arr = [5, 3, 4, 1, 2]
+
+i = 4
+
+while True:
+  if i > 0:
+    if arr[i-1] > arr[i]:
+      t = arr[i-1]
+      arr[i-1] = arr[i]
+      arr[i] = t   
+
+    i = i - 1
+    
+{% endhighlight %}
+
+출력 답:   
+{: .notice}
+
+<img src="https://bittestb0341.github.io/assets\img\06_20210916day05.png">
+
+{% highlight python %}
+arr = [5, 3, 4, 1, 2]
+
+k = 0
+
+while True:
+
+  if  k < 4:
+    i = 4
+    while True:
+      if i > k:
+        if arr[i-1] > arr[i]:
+          t = arr[i-1]
+          arr[i-1] = arr[i]
+          arr[i] = t   
+
+        i = i - 1
+      else:
+        k = k + 1
+        break
+
+  else:
+    print(arr)
+    break
+    
+{% endhighlight %}
+
+출력 답:   [1, 2, 3, 4, 5]
+{: .notice}
+___
+
+#### 단순 삽입법 ( insertion sort )
+
+1. 올바른 순서가 되도록 데이터를 삽입한다. 다른 이름으로 삽입정렬, 기본삽입법, 삽입법이라고 한다.
+2. 요소를 하나씩 차례대로 올바른 위치에 삽입하여 최종적으로 전체를 정렬한다.
+3. [5 3 4 1 2] 먼저 제일 왼쪽에 있는 숫자를 정렬이 된상태라고 가정한다. 나머지 4개는 정렬이 안된 상태로 가정한다.
+4. [5   3 4 1 2] 아직 아무것도 하지 않은 단계에사 정렬된 공이라고 가정하는 이유는 정렬된 공이 하나도 없으면 대소를 비교할 대상이 없기 때문이다. 따라서 정렬되지 않은 공을 정확한 위치에 삽입할 수 없기 때문에 우선 0번의 데이터를 '정렬되었다'라고 가정한다. 
+5.  정렬되지 않은 데이터 중에서 가장 왼쪽의 데이터 부터 정렬된 데이터의 올바른 위치에 삽입하는 방법을 사용한다. 현재 정렬되지 않은 데이터들의 가장 왼쪽에 있는 3 데이터를 정렬된 데이터 즉 5 의 올바른 위치에 삽입한다. 정확한 위치는 5의 앞이 된다. 3을 5의 앞에 삽입한다. 
+
+{% highlight python %}
+[3 5 4 1 2]
+
+원래 0번 위치에 있던 데이터 5를 1의 위치로 옮기고 3 데이터를 0번째로 넣는다. 이제 0, 1 번째가 '정렬된 상태'가 되었다.
+
+다음으로 index 2번째에 있는 4 데이터를 '정렬된 데이터' 중에 올바른 위치로 삽입한다.
+
+[3 4 5 1 2]
+
+현재 3 4 5 가 정렬된 상태가 되었다. 1을 올바른 위치에 삽입한다.
+
+[1 3 4 5 2]
+
+[1 2 3 4 5] 최종 정렬이 완성되었다.
+{% endhighlight %}
+
+#### 단순 삽입법의 알고리즘
+삽입하고 싶은 데이터는 변수를 별도로 준비한다.
+
+변수의 데이터를 정렬된 데이터와 순서대로 비교한다. 변수의 데이터보다 작은 데이터가 발견되면 그 뒤의 요소에 변수의 데이터를 삽입한다.
+
+### 문제
+
+알고리즘을 보고 파이썬 코드를 입력하시오.
+<br>
+<img src="https://bittestb0341.github.io/assets\img\07_20210916day05.png">
+
+{% highlight python %}
+arr = [5, 3, 4, 1, 2]
+i = 1
+
+while True:
+  if i < 5:
+    x = arr[1] 
+    k = 1
+    if arr[k-1] > x:
+      arr[k] = arr[k-1] 
+      k = k-1
+      arr[k] = x
+  else:
+    print(arr)
+    break
+{% endhighlight %}
+
+설명: arr0 과 arr[1] 의 교환은 잘 이루어졌다.
+arr[1] arr[2]을 비교한다. arr[i](i == 2) arr[2]의 데이터를 변수 x에 대입한다. i -> k 즉 k 에 2를 대입하여 arr[2] 빈요소가 되었다.
+그 다음은 x 에 대입한 4 arr[1]의 5를 비교한다. 이 둘을 비교하면 5 크기 때문에 5를 하나 뒤로 이동해야 한다.
+5을 이동하고나면 arr[k-1] (현재 k==2)를 빈요소로 지정하기 위해서 k-1 -> k로 처리한다. k가 2에서 1로 되어 빈요소가 arr[2] arr[1]로 바뀌었다. 그러나 여기서 문제가 발생한다.
+k-1 -> k == 1의 다음의 처리가 아직 x -> array[k]로 되어있다. 이런 상태라면 아직 x 와 arr[0]의 비교처리가 끝나지 않았음에도 arr[1]에 x의 데이터 4가 대입된다.
+k - 1 -> k k가 1이 된 후에는 다시 arr[k-1] > x 의 비교처리로 되돌아가 arr[0] 과 x를 비교할 수 있도록 반복 구조를 만들어야 한다. 반복 구조는 종료 조건을 필요로 한다. 여기서는 k 값을 확인하자.
+k 가 빈요소의 첨자를 나타낸다. k가 2,1, 0의 순서로 하나씩 줄어든다. k가 0이 된다는 것은 빈요소 arr[k]가 맨앞의 요소 arr[0]이라는것을 의미한다. 더이상의 요소가 존재할수 없다.
+이와는 반대로 k가 0보다 큰 공안에는 앞의 요소의 비교처리를 계속 반복해야 한다. 따라서 조건식은 k > 0로 정하여 Yes의 경우는 k를 1개씩 앞으로 이동하면서 (k-1->k)비교 처리를 반복 실행하자. No 인경우는 x의 데이터를 arr[k]에 대입한다.
+{: .notice}
+___
